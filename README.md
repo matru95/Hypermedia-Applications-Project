@@ -1,3 +1,11 @@
+## ALERT
+
+Previously I was in the group with Dario Sardi & Giulia Vezzoli; after Prof.ssa Garzotto's agreement,
+we decided to split up our projects, so I'm delivery this application as single-student-group.
+
+There is another repo that Giulia Vezzoli created at the start of the project with our 3 names,
+in which there is almost nothing, so I'm asking you to ignore it (there should even be an entry on Google's Form).
+
 ## README
 
 Matteo Rubiu - 10505109 - matteo.rubiu@mail.polimi.it
