@@ -1,0 +1,264 @@
+/* common style */
+
+body{
+  font-family:'Oswald', sans-serif;
+  min-width:322px;
+  min-height: inherit;
+  color:#303050;
+}
+
+a {
+  color: #303050;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus{
+  color:#303050;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color:#4060c0;
+}
+
+.navbar-default .navbar-toggle{
+  border-color:#303050;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+  background-color:rgba(64,96,192,0.1);
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color:#303050;
+}
+
+@media (min-width: 768px) and (max-width: 886px) {
+  .container-fluid{
+    padding-left:5%;
+    padding-right:5%;
+  }
+}
+
+@media (min-width:992px) {
+  .container-fluid{
+    padding-left:8%;
+    padding-right:8%;
+  }
+}
+
+@media (min-width:1200px) {
+  .container-fluid{
+    padding-left:10%;
+    padding-right:10%;
+  }
+}
+
+@media (min-width:1600px) {
+  .container-fluid{
+    padding-left:15%;
+    padding-right:15%;
+  }
+}
+
+.container-fluid{
+  background:linear-gradient(to bottom , rgba(255,255,64,0.1) , rgba(64, 96, 192, 0.1));
+}
+
+.navbar{
+  position:relative;
+  min-height:42px;
+  margin-bottom:0px;
+  border-bottom:1px solid #303050;
+}
+
+#brand{
+  color:#303050;
+  margin-top:0px;
+  font-size:1.5em;
+  font-family:'Oswald', sans-serif;
+}
+
+#logo{
+  max-height:48px;
+  margin-top:-9px;
+  margin-right:6px;
+  display:inline-block;
+}
+
+#navcol-1{
+  margin-top:3px;
+  font-size:1.1em;
+  font-family:'Oswald', sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 886px) {
+  .navbar-nav{
+  }
+}
+
+.footer{
+  position:relative;
+  height:60px;
+  background-color:#303050;
+}
+
+.container{
+  width:auto;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+#footer-paragraph{
+  margin-top:20px;
+  color:#fffff0;
+  font-size:medium;
+}
+
+@media (max-width:383px) {
+  .list-group.group{
+    padding-left:8%;
+    padding-right:8%;
+  }
+}
+
+@media (min-width:384px) and (max-width:511px) {
+  .list-group.group{
+    padding-left:10%;
+    padding-right:10%;
+  }
+}
+
+@media (min-width:384px) and (max-width:767px) {
+  .list-group.group{
+    padding-left:24%;
+    padding-right:24%;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .list-group.group{
+    padding-left:32%;
+    padding-right:32%;
+  }
+}
+
+.list-group-item{
+  background-color:#303050;
+}
+
+.list-group-item > a{
+  color:#fffff0;
+}
+
+.container-style {
+  text-align:center;
+  padding:50px 10% 50px 10%;
+  background:linear-gradient(to bottom, rgba(64,96,192,0.1), rgba(255,255,64,0.1));
+}
+
+/* index.html style */
+
+#carousel-1{
+  padding:0px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+  margin:auto;
+}
+
+.carousel-control.left {
+  background-image:linear-gradient(to right, rgba(64, 96, 192, 0.3) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-control.right {
+  background-image:linear-gradient(to left, rgba(64, 96, 192, 0.3) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-caption {
+  color:#fffff0;
+  text-shadow:1px 1px 2px rgba(48,48,80,0.75);
+}
+
+.container-style > h1 {
+  font-weight:normal;
+  margin-bottom:30px;
+}
+
+#welcome p {
+  max-width:800px;
+  font-size:20px;
+  margin:0 auto;
+}
+
+#whoweare p {
+  max-width:800px;
+  font-size:20px;
+  margin:0 auto;
+  margin-bottom: 100px;
+}
+
+#why i {
+  font-size:40px;
+}
+
+/* doctors.html style */
+
+.myDiv {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.myText {
+  margin-bottom: 30px;
+}
+
+.myMap {
+  margin-bottom: 80px;
+}
+
+.left-aligned-table {
+  text-align: left;
+}
+
+.center-aligned {
+  text-align: center;
+}
+
+.table-img {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 100px;
+}
+
+#myTable-margin {
+  vertical-align: middle;
+}
+
+@media (min-width:992px) and (max-width:1200px){
+  .myData{
+    padding-left:25%;
+  }
+}
+
+.myDesc {
+  margin-top: 30px;
+}
+
+.single-image {
+  height: 256px;
+  width: 256px;
+}
+
+.table {
+  border: 1px solid #dddddd;
+}
+
+.div-margin {
+  margin-top: 50px;
+}

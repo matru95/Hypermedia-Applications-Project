@@ -1,0 +1,38 @@
+[ 
+  {
+    "id": 0,
+    "name": "Milan's Clinic",
+    "address": "Piazza Leonardo Da Vinci 32",
+    "cap": "20133",
+    "city": "Milan",
+    "phone": "0212345678",
+    "openingdays": "Monday to Friday",
+    "openingtime": "07:30 - 19:30",
+    "services": "Ankle Hip Knee Spine",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.603306875341!2d9.225057115935144!3d45.47779447910104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6f3b87c7d5d%3A0xc785580542e713e2!2sPiazza+Leonardo+da+Vinci%2C+32%2C+20133+Milano!5e0!3m2!1sit!2sit!4v1497972219154"
+  },
+  {
+    "id": 1,
+    "name": "Turin's Clinic",
+    "address": "Corso Duca degli Abruzzi 24",
+    "cap": "10129",
+    "city": "Turin",
+    "phone": "0117654321",
+    "openingdays": "Monday to Friday",
+    "openingtime": "08:00 - 20:00",
+    "services": "Hip Rehab Spine",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.148825599274!2d7.6600142159240585!3d45.06249197909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d1823ab8863%3A0xf4d8ac6f3d1d0dda!2sCorso+Duca+degli+Abruzzi%2C+24%2C+10129+Torino%2C+Italia!5e0!3m2!1sit!2sit!4v1497994714133"
+  },
+  {
+    "id": 2,
+    "name": "Rome's Clinic",
+    "address": "Via Orazio Raimondo 18",
+    "cap": "00173",
+    "city": "Rome",
+    "phone": "0212345678",
+    "openingdays": "Monday to Saturday",
+    "openingtime": "07:00 - 21:00",
+    "services": "Ankle Knee Rehab",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.012940370494!2d12.595595315841006!3d41.84954827922455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132588226fc6b713%3A0xeccc22bd5d43429f!2sVia+Orazio+Raimondo%2C+18%2C+00173+Roma%2C+Italia!5e0!3m2!1sit!2sit!4v1497994794174"
+  }
+]

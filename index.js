@@ -3,117 +3,156 @@ const app = express();
 const bodyParser = require("body-parser");
 const sqlDbFactory = require("knex");
 const process = require("process");
-
 let sqlDb;
 
+/* Init DB with SqLite3 OR PostgreSQL */
 function initSqlDB() {
-  /* Locally we should launch the app with TEST=true to use SQLlite:
-
-       > TEST=true node ./index.js
-
-    */
+  //process.env.TEST = true;
   if (process.env.TEST) {
     sqlDb = sqlDbFactory({
-      client: "sqlite3",
-      debug: true,
-      connection: {
-        filename: "./petsdb.sqlite"
-      },
-      useNullAsDefault: true
+      client: "sqlite3"
+      , debug: true
+      , connection: {
+        filename: "./database.sqlite"
+      }
+      , useNullAsDefault: true
     });
-  } else {
+  }
+  else {
     sqlDb = sqlDbFactory({
-      debug: true,
-      client: "pg",
-      connection: process.env.DATABASE_URL,
-      ssl: true
+      debug: true
+      , client: "pg"
+      , connection: process.env.DATABASE_URL
+      , ssl: true
     });
   }
 }
 
-function initDb() {
-  return sqlDb.schema.hasTable("pets").then(exists => {
+/* Initialize locations on DB from json*/
+function initLocations() {
+  return sqlDb.schema.hasTable("locations").then(exists => {
     if (!exists) {
-      sqlDb.schema
-        .createTable("pets", table => {
-          table.increments();
-          table.string("name");
-          table.integer("born").unsigned();
-          table.enum("tag", ["cat", "dog"]);
-        })
-        .then(() => {
-          return Promise.all(
-            _.map(petsList, p => {
-              delete p.id;
-              return sqlDb("pets").insert(p);
-            })
-          );
-        });
-    } else {
+      sqlDb.schema.createTable("locations", table => {
+        table.increments();
+        table.text("name");
+        table.text("address");
+        table.string("cap");
+        table.string("city");
+        table.string("phone");
+        table.text("openingdays");
+        table.text("openingtime");
+        table.string("services");
+        table.text("map");
+      }).then(() => {
+        return Promise.all(_.map(locationsList, l => {
+          return sqlDb("locations").insert(l);
+        }));
+      });
+    }
+    else {
+      return true;
+    }
+  });
+}
+
+/* Initialize doctors on DB from json*/
+function initDoctors() {
+  return sqlDb.schema.hasTable("doctors").then(exists => {
+    if (!exists) {
+      sqlDb.schema.createTable("doctors", table => {
+        table.increments();
+        table.string("name");
+        table.string("surname");
+        table.string("email");
+        table.string("phone");
+        table.string("cv");
+        table.string("location");
+        table.string("picture");
+        table.string("service");
+        table.boolean("isResponsible");
+      }).then(() => {
+        return Promise.all(_.map(doctorsList, d => {
+          return sqlDb("doctors").insert(d);
+        }));
+      });
+    }
+    else {
+      return true;
+    }
+  });
+}
+
+/* Initialize services on DB from json*/
+function initServices() {
+  return sqlDb.schema.hasTable("services").then(exists => {
+    if (!exists) {
+      sqlDb.schema.createTable("services", table => {
+        table.increments();
+        table.string("name");
+        table.string("extname");
+        table.string("picture");
+        table.text("title");
+        table.text("description");
+        table.text("doctors");
+      }).then(() => {
+        return Promise.all(_.map(servicesList, d => {
+          return sqlDb("services").insert(d);
+        }));
+      });
+    }
+    else {
       return true;
     }
   });
 }
 
 const _ = require("lodash");
-
 let serverPort = process.env.PORT || 5000;
-
-let petsList = require("./petstoredata.json");
-
+let locationsList = require("./jsons/locations.json");
+let doctorsList = require("./jsons/doctors.json");
+let servicesList = require("./jsons/services.json");
 app.use(express.static(__dirname + "/public"));
-
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
-// /* Register REST entry point */
-app.get("/pets", function(req, res) {
-  let start = parseInt(_.get(req, "query.start", 0));
-  let limit = parseInt(_.get(req, "query.limit", 5));
-  let sortby = _.get(req, "query.sort", "none");
-  let myQuery = sqlDb("pets");
+/* Register REST entry point */
 
-  if (sortby === "age") {
-    myQuery = myQuery.orderBy("born", "asc");
-  } else if (sortby === "-age") {
-    myQuery = myQuery.orderBy("born", "desc");
-  }
-  myQuery.limit(limit).offset(start).then(result => {
-    res.send(JSON.stringify(result));
+/* REST's GET for the locations (as json) */
+app.get("/locations", function (req, res) {
+  let myData = sqlDb("locations");
+  let myQuery = req.query;
+  myData.where(myQuery).then(result => {
+    res.json(result);
   });
 });
 
-app.delete("/pets/:id", function(req, res) {
-  let idn = parseInt(req.params.id);
-  sqlDb("pets").where("id", idn).del().then(() => {
-    res.status(200);
-    res.send({ message: "ok" });
+/* REST's GET for the doctors (as json) */
+app.get("/doctors", function (req, res) {
+  let myData = sqlDb("doctors");
+  let myQuery = req.query;
+  myData.where(myQuery).then(result => {
+    res.json(result);
   });
 });
 
-app.post("/pets", function(req, res) {
-  let toappend = {
-    name: req.body.name,
-    tag: req.body.tag,
-    born: req.body.born
-  };
-  sqlDb("pets").insert(toappend).then(ids => {
-    let id = ids[0];
-    res.send(_.merge({ id, toappend }));
+/* REST's GET for the doctors (as json) */
+app.get("/services", function (req, res) {
+  let myData = sqlDb("services");
+  let myQuery = req.query;
+  myData.where(myQuery).then(result => {
+    res.json(result);
   });
 });
-
-// app.use(function(req, res) {
-//   res.status(400);
-//   res.send({ error: "400", title: "404: File Not Found" });
-// });
 
 app.set("port", serverPort);
-
 initSqlDB();
-initDb();
+initLocations();
+initDoctors();
+initServices();
 
 /* Start the server on port 3000 */
-app.listen(serverPort, function() {
+app.listen(serverPort, function () {
   console.log(`Your app is ready at port ${serverPort}`);
 });

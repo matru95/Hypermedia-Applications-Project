@@ -1,0 +1,47 @@
+[ 
+  {
+    "id": 0,
+    "name": "Hip",
+    "extname": "Hip Replacement",
+    "picture": "assets/img/hip.png",
+    "title": "Whether you have just begun exploring treatment options or have already decided to undergo hip replacement surgery, this information will help you understand the benefits and limitations of total hip replacement.",
+    "description": "The hip is one of the biggest working joints of the body. Hip problems can seriously impact your entire body and your ability to perform normal activities. When the joint is severely damaged due to arthritis or other problems, hip replacement surgery may be recommended. Each year, more than 168,000 people undergo joint replacement surgery for a new hip. This procedure can greatly improve your quality of life by relieving pain associated with a hip problem, allowing you to live a fuller, more active life. Orthopedic surgeons at Leonardo Da Vinci have expertise in joint replacement surgery, called arthroplasty, of the hip, knee and shoulder. In addition, there are physician's assistants, nurses and physical therapists who are specially trained in the care of patients with joint replacements. The team provides comprehensive management of arthritis in these joints, including total joint replacement, and offers the latest advancements in joint replacement surgery, including minimally invasive surgical techniques; computer assisted surgery and advanced implant options.",
+    "doctors": "Foreman Shepherd"
+  },
+  {
+    "id": 1,
+    "name": "Spine",
+    "extname": "Spine Surgery",
+    "picture": "assets/img/spine.png",
+    "title": "A common source of back or neck pain is a herniated disk. Sometimes called a \"slipped\" or \"ruptured\" disk, this condition most often occurs in the lower back, as well as the smaller disks in the neck.",
+    "description": "A common source of back or neck pain is a herniated disk. Sometimes called a \"slipped\" or \"ruptured\" disk, this condition most often occurs in the lower back, as well as the smaller disks in the neck. Although a herniated disk can sometimes be very painful, most people feel much better with just a few months of simple, nonsurgical treatments.Disks are soft, rubbery pads found between the hard bones (vertebrae) that make up the spinal column. The disks between the vertebrae allow the back to flex or bend. Disks also act as shock absorbers. Disks in the lumbar spine (low back) are composed of a thick outer ring of cartilage (annulus) and an inner gel-like substance (nucleus). In the cervical spine (neck), the disks are similar but smaller in size.",
+    "doctors": "Cuddy Lawson"
+  },
+  {
+    "id": 2,
+    "name": "Ankle",
+    "extname": "Ankle Surgery",
+    "picture": "assets/img/ankle.png",
+    "title": "A fractured ankle can range from a simple break in one bone, which may not stop you from walking, to several fractures, which forces your ankle out of place and may require that you not put weight on it for a few months.",
+    "description": "A broken ankle is also known as an ankle \"fracture\". This means that one or more of the bones that make up the ankle joint are broken. A fractured ankle can range from a simple break in one bone, which may not stop you from walking, to several fractures, which forces your ankle out of place and may require that you not put weight on it for a few months. Simply put, the more bones that are broken, the more unstable the ankle becomes. There may be ligaments damaged as well. The ligaments of the ankle hold the ankle bones and joint in position.Broken ankles affect people of all ages. During the past 30 to 40 years, doctors have noted an increase in the number and severity of broken ankles, due in part to an active, older population of \"baby boomers\".",
+    "doctors": "Dorian Nowzaradan"
+  },
+  {
+    "id": 3,
+    "name": "Knee",
+    "extname": "Knee Therapy",
+    "picture": "assets/img/knee.png",
+    "title": "Patellofemoral pain syndrome is a broad term used to describe pain in the front of the knee and around the patella, or kneecap.",
+    "description": "Patellofemoral pain syndrome is a broad term used to describe pain in the front of the knee and around the patella, or kneecap. It is sometimes called \"runner's knee\" or \"jumper's knee\" because it is common in people who participate in sports—particularly females and young adults—but patellofemoral pain syndrome can occur in nonathletes, as well. The pain and stiffness it causes can make it difficult to climb stairs, kneel down, and perform other everyday activities. Many things may contribute to the development of patellofemoral pain syndrome. Problems with the alignment of the kneecap and overuse from vigorous athletics or training are often significant factors. Symptoms are often relieved with conservative treatment, such as changes in activity levels or a therapeutic exercise program.",
+    "doctors": "Chase House"
+  },
+  {
+    "id": 4,
+    "name": "Rehab",
+    "extname": "Rehabilitation",
+    "picture": "assets/img/rehab.png",
+    "title": "Pain in your muscles, tissues, joints and bones can prevent you from reaching your optimal physical and functional capabilities. Our clinicians are trusted experts in evaluating the movement system and in treating identified movement impairments.",
+    "description": "Patients are often referred to physical therapy before surgery to discuss post-surgical expectations, including precautions or restrictions and to maximize strength, range of motion, and function. You will learn a variety of skills that will be important after surgery including how to safely move in bed, get in and out of a chair, and use an assistive device such as crutches or a walker. You might also receive exercises to perform at home to optimize your movement prior to surgery. After surgery, our goal is to return you to your prior level of physical function. This includes successful return to work, recreational activities, and/or competitive sports. Our therapists provide one-on-one care to closely monitor your progress according to your physician’s guidelines as well as your individualized response to physical therapy. We maintain regular communication with your surgeon to ensure that your progress matches the expected outcome of your surgical procedure so that your recovery is optimal.",
+    "doctors": "Cox White"
+  }
+]
