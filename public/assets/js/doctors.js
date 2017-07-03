@@ -5,7 +5,7 @@ $.get("doctors", result => {
     let currentResult = sortedDoctors[i];
     
     /*Append html code */
-    if (currentResult.isResponsible === "yes" )
+    if (currentResult.isResponsible === true)
        $("#myDoctors").append("<tr><td><a href=\"doctor.html?id=" + currentResult.id + "\"><img class=\"img-responsive table-img\" src=\"" + currentResult.picture + "\"/>" + currentResult.name + " <b>" + currentResult.surname + "</b></a></td><td id=\"myTable-margin\">" + currentResult.service + "<p>[Responsible]</p></td></tr>");
     else $("#myDoctors").append("<tr><td><a href=\"doctor.html?id=" + currentResult.id + "\"><img class=\"img-responsive table-img\" src=\"" + currentResult.picture + "\" />" + currentResult.name + " <b>" + currentResult.surname + "</b></a></td><td id=\"myTable-margin\">" + currentResult.service + "</td></tr>");
   }
