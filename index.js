@@ -69,7 +69,7 @@ function initDoctors() {
         table.string("location");
         table.string("picture");
         table.string("service");
-        table.boolean("isResponsible");
+        table.string("isResponsible");
       }).then(() => {
         return Promise.all(_.map(doctorsList, d => {
           return sqlDb("doctors").insert(d);

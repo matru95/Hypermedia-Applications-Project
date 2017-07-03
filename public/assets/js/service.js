@@ -20,7 +20,7 @@ $.get("services", result => {
     $("#myServiceImg").append("<img class=\"single-image\" src=\"" + currentResult.picture + "\">");
     $("#myServiceData").append("<h1 class=\"myText\">" + currentResult.extname + "</h1><div class=\"table-responsive\"><table class=\"table\"><thead><tr><td><h4>Doctors operating in this service:</h4></td></tr></thead><tbody id=\"doctorsTable\"></tbody></table></div>");
     for(let j = 0; j < thoseDoctorsIDs.length; j++)
-      if (thoseDocAreResponsibles[j] === 1)
+      if (thoseDocAreResponsibles[j] === "yes")
         $("#doctorsTable").append("<tr><td><h4><a href=\"doctor.html?id=" + thoseDoctorsIDs[j] + "\">" + thoseDoctors[j] + "<p>[Service Responsible]</p></a></h4></td></tr>");
       else $("#doctorsTable").append("<tr><td><h4><a href=\"doctor.html?id=" + thoseDoctorsIDs[j] + "\">" + thoseDoctors[j] + "</a></h4></td></tr>");
     $("#myServiceDesc").append("<p>" + currentResult.description + "</p>");

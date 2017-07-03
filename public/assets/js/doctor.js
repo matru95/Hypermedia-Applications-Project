@@ -17,7 +17,7 @@ $.get("doctors", result => {
     /* Append html code */
     $("#myDoctorImg").append("<img class=\"single-image\" src=\"" + currentResult.picture + "\">");
     $("#myDoctorData").append("<h1 class=\"myText\">" + currentResult.name + " " + currentResult.surname + "</h1><h4><p>Email: <a href=\"mailto:" + currentResult.email + "\">" + currentResult.email + "</a></p><p>Phone: " + currentResult.phone + "</p><p>Curriculum Vitae: <a href=\"" + currentResult.cv + "\">CV.pdf</a></p><p>Doctor's Service: <a href=\"service.html?id=" + thisServiceID + "\"><b>" + thisServiceName + "</b></a></p></h4>");
-    if (currentResult.isResponsible === 1 )
+    if (currentResult.isResponsible === "yes" )
       $("#myDoctorData").append("<p><h4>[Service Responsible]</h4></p>");
   });
 });
