@@ -1,34 +1,19 @@
-# README
+## README
 
-This repository will be updated during our hands on lectures with a
-small app to manage pets. We suggest to use it as a starting point
-(fork) for your project once we finished.
+Matteo Rubiu - 10505109 - matteo.rubiu@mail.polimi.it
 
-## What is this repository for?
+This repository contains the whole project of the website for a Medical Clinic, which name is "Leonardo Da Vinci".
 
-Once you fork this repo, you can completely modify it at your own will
-to write your project. You will find the instructions to deploy this
-repo directly to your heroku account below.
+The website has been realized writing both FRONT-END and BACK-END.
 
-## How do I get set up to test this locally?
 
--   To run this server locally you should have Nodejs
-    (v7.5.0) installed.
+## FRONT-END
 
--   To install the dependencies:
+As regards FRONT-END, I used Bootstrap to build my static site along with some css styles.
+Then I used the javascript code to retrieve data as jsons (regarding: doctors, locations, services)
+from the database in the BACK-END and manipulate them to add HTML code dynamically into my pages.
 
-        npm install .
+## BACK-END
 
--   To start the server (see property `scripts` in package.json)
-
-        npm start
-
-## How do I deploy this to Heroku
-
-*Do this only if you are the team administrator*.
-
-1.  Setup heroku and/or login according to the manual
-
-2.  just type:
-
-        git push heroku master
+As regards BACK-END, I created jsons files for initializing my database with doctors, locations, services.
+Then I added REST's GETs for each of these tables on database: doctors, locations, servicess.
